@@ -42,7 +42,8 @@ android {
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "com.bitbytestudio"
+
+            groupId = "com.github.rjfahad44"
             artifactId = "honeycomblistview"
             version = "1.0.0"
 
