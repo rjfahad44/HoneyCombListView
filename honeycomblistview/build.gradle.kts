@@ -42,10 +42,13 @@ android {
 publishing {
     publications {
         register<MavenPublication>("release") {
-
-            groupId = "com.github.rjfahad44"
+            groupId = "com.bitbytestudio"
             artifactId = "honeycomblistview"
-            version = "1.0.0"
+
+            version = providers
+                .gradleProperty("version")
+                .orElse("1.0.0")
+                .get()
 
             afterEvaluate {
                 from(components["release"])
